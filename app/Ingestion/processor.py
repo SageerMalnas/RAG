@@ -50,7 +50,7 @@ def process_file(file_path: str, filename: str, source_type: str):
             elif ext == "txt":
                 full_text = parse_text(file_path)
             elif ext in ("docx", "pptx"):
-                from app.ingestion.loaders.office import parse_office
+                from app.Ingestion.loader.office import parse_office
                 full_text = parse_office(file_path)
             else:
                 logfire.warning(f"Skipping unsupported file type: {filename}")
@@ -168,8 +168,8 @@ def run_universal_ingestion(base_dir: str, explicit_source_type: str = None, wip
 
 if __name__ == "__main__":
     # Usage:
-    #   python -m app.ingestion.processor DATA --wipe
-    #   python -m app.ingestion.processor DATA/true_data true
+    #   python -m app.Ingestion.processor DATA --wipe
+    #   python -m app.Ingestion.processor DATA/true_data true
     wipe_requested = "--wipe" in sys.argv
     clean_args = [a for a in sys.argv if a != "--wipe"]
 
