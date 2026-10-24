@@ -5,8 +5,8 @@ load_dotenv()
 
 
 class Settings:
-    QDRANT_API_KEY=os.getenv('QDRANT_API_KEY')
-    QDRANT_CLUSTER_ENDPOINT=os.getenv('QDRANT_CLUSTER_ENDPOINT')
+    QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+    QDRANT_URL=os.getenv('QDRANT_CLUSTER_ENDPOINT')
     GEMINI_API_KEY=os.getenv('GEMINI_API_KEY')
     QDRANT_COLLECTION='enterprise_rag'
 
