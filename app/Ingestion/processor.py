@@ -27,6 +27,7 @@ qdrant_client = QdrantClient(
 )
 
 
+
 def save_processed_locally(data: dict, source_type: str, filename: str) -> str:
     """Save parsed chunk metadata as JSON in processed_data/<source_type>/."""
     folder = os.path.join(PROCESSED_DATA_DIR, source_type)
